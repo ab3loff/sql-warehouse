@@ -35,7 +35,7 @@ $_SESSION['user_id'] = 1;
                     FROM requests 
                     JOIN users 
                     ON requests.user_id = users.id 
-                    ORDER BY requests.id";
+                    ORDER BY users.name";
 
         $result = $db->pdo->query($sql);
 

@@ -21,11 +21,7 @@ $db = new Database();
         <h1>Выполнение запроса</h1>
         <a href="index.php" class="d-block btn btn-primary">На главную</a>
             <?php
-            $sql = "SELECT users.name, requests.id, requests.request_name, requests.request_text 
-                    FROM requests 
-                    JOIN users 
-                    ON requests.user_id = users.id 
-                    ORDER BY requests.id ";
+            $sql = "SELECT * FROM requests ORDER BY id";
 
             $stmt = $db->pdo->prepare($sql);
             $stmt->execute();
