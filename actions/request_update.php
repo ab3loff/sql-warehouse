@@ -1,7 +1,6 @@
 <?php
 require_once '../Database.php';
 $db = new Database();
-session_start();
 
 $sql = 'UPDATE requests SET request_name = :request_name, request_text = :request_text WHERE id = :id';
 $stmt = $db->pdo->prepare($sql);
